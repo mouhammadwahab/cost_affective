@@ -8,53 +8,58 @@
   </head>
   <body>
     <div class="container">
-      <h1>AI Prototype Dashboard</h1>
+      <header class="hero">
+        <h1>AI Prototype Dashboard</h1>
+        <p class="subtitle">Client-ready tester: submit prompts/text and download session results.</p>
+      </header>
 
-      <section class="card">
-        <h2>Login (Optional)</h2>
-        <div class="row">
-          <label>Email</label>
-          <input id="email" type="email" autocomplete="email" />
-        </div>
-        <div class="row">
-          <label>Password</label>
-          <input id="password" type="password" autocomplete="current-password" />
-        </div>
-        <div class="row buttons">
-          <button id="signupBtn" type="button">Sign up</button>
-          <button id="loginBtn" type="button">Login</button>
-        </div>
-        <div class="hint" id="authHint"></div>
-      </section>
+      <div class="cards">
+        <section class="card">
+          <h2>Login (Optional)</h2>
+          <div class="row">
+            <label>Email</label>
+            <input id="email" type="email" autocomplete="email" />
+          </div>
+          <div class="row">
+            <label>Password</label>
+            <input id="password" type="password" autocomplete="current-password" />
+          </div>
+          <div class="row buttons">
+            <button id="signupBtn" type="button">Sign up</button>
+            <button id="loginBtn" type="button">Login</button>
+          </div>
+          <div class="hint" id="authHint"></div>
+        </section>
 
-      <section class="card">
-        <h2>Ask</h2>
-        <div class="row">
-          <label>Session ID (for saving results)</label>
-          <input id="sessionId" type="text" placeholder="e.g. client-demo-01" />
-        </div>
+        <section class="card">
+          <h2>Ask</h2>
+          <div class="row">
+            <label>Session ID (for saving results)</label>
+            <input id="sessionId" type="text" placeholder="e.g. client-demo-01" />
+          </div>
 
-        <div class="row">
-          <label>Prompt</label>
-          <textarea id="prompt" rows="5" placeholder="Type your question..."></textarea>
-        </div>
+          <div class="row">
+            <label>Prompt</label>
+            <textarea id="prompt" rows="5" placeholder="Type your question..."></textarea>
+          </div>
 
-        <div class="row">
-          <label>Upload text files (.txt) (optional)</label>
-          <input id="fileInput" type="file" accept=".txt,text/plain" multiple />
-          <div class="hint" id="fileStatus"></div>
-        </div>
+          <div class="row">
+            <label>Upload text files (.txt) (optional)</label>
+            <input id="fileInput" type="file" accept=".txt,text/plain" multiple />
+            <div class="hint" id="fileStatus"></div>
+          </div>
 
-        <div class="row buttons">
-          <button id="askBtn" type="button">Submit</button>
-          <button id="clearBtn" type="button" class="secondary">Clear</button>
-          <button id="downloadBtn" type="button" class="secondary">Download results</button>
-        </div>
+          <div class="row buttons">
+            <button id="askBtn" type="button">Submit</button>
+            <button id="clearBtn" type="button" class="secondary">Clear</button>
+            <button id="downloadBtn" type="button" class="secondary">Download results</button>
+          </div>
 
-        <div class="hint" id="status"></div>
+          <div class="hint" id="status"></div>
 
-        <div class="response" id="response"></div>
-      </section>
+          <div class="response" id="response"></div>
+        </section>
+      </div>
 
       <div class="footer">
         Backend: <span class="mono">POST /ask</span> | Health: <span class="mono">GET /health</span>
