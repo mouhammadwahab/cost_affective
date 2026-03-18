@@ -2,7 +2,7 @@ const $ = (id) => document.getElementById(id);
 
 // When deployed, the frontend and backend are often different origins.
 // Set `window.__API_BASE__` in `index.html` to your deployed backend base URL.
-const API_BASE = window.__API_BASE__ || "";
+const API_BASE = window.__API_BASE__ || "https://cost-affective-backend.onrender.com";
 
 function setHint(el, msg, isError) {
   el.textContent = msg || "";
