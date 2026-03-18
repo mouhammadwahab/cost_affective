@@ -1,0 +1,101 @@
+:root {
+  --bg: #0b1020;
+  --card: #121a33;
+  --text: #e7ecff;
+  --muted: #aab3d6;
+  --accent: #6aa6ff;
+  --danger: #ff6a6a;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 860px;
+  margin: 28px auto;
+  padding: 0 16px;
+}
+
+h1 {
+  margin: 0 0 16px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.buttons {
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+input,
+textarea {
+  background: #0f1730;
+  border: 1px solid #27325f;
+  color: var(--text);
+  border-radius: 8px;
+  padding: 10px;
+  outline: none;
+}
+
+button {
+  background: var(--accent);
+  border: none;
+  color: #081028;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid #3a4a86;
+}
+
+.hint {
+  color: var(--muted);
+  min-height: 18px;
+}
+
+.hint.error {
+  color: var(--danger);
+}
+
+.response {
+  white-space: pre-wrap;
+  background: #0f1730;
+  border: 1px solid #27325f;
+  border-radius: 8px;
+  padding: 12px;
+  min-height: 60px;
+}
+
+.footer {
+  color: var(--muted);
+  font-size: 13px;
+  padding: 10px 0 28px;
+}
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    monospace;
+}
+
